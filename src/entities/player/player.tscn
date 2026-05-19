@@ -1,11 +1,77 @@
 [gd_scene format=3 uid="uid://ccj6g1dgola38"]
 
 [ext_resource type="Script" uid="uid://dl30gpppdf5g5" path="res://character_body_2d.gd" id="1_4m8ck"]
+[ext_resource type="Texture2D" uid="uid://353wk45lcipo" path="res://sprite/spr_simon.png" id="2_vt6n5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt6n5"]
+size = Vector2(113, 128.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_muk8e"]
+atlas = ExtResource("2_vt6n5")
+region = Rect2(2, 21, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mfjg"]
+atlas = ExtResource("2_vt6n5")
+region = Rect2(84, 21, 26, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt6n5"]
+atlas = ExtResource("2_vt6n5")
+region = Rect2(32, 21, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrxq6"]
+atlas = ExtResource("2_vt6n5")
+region = Rect2(48, 21, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ketdh"]
+atlas = ExtResource("2_vt6n5")
+region = Rect2(64, 21, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4m8ck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_muk8e")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mfjg")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt6n5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrxq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ketdh")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1076193965]
 script = ExtResource("1_4m8ck")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1656101599]
 shape = SubResource("RectangleShape2D_vt6n5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1044831164]
+texture_filter = 1
+position = Vector2(-0.3749962, 2.250001)
+scale = Vector2(5.808824, 4.046875)
+sprite_frames = SubResource("SpriteFrames_4m8ck")
+animation = &"jump"
+autoplay = "idle"
+frame_progress = 0.94715047
+offset = Vector2(-1, -4)
+flip_h = true
