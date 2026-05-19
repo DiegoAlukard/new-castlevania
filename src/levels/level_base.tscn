@@ -1,18 +1,22 @@
-[gd_scene format=3 uid="uid://dgwg4okh2obb8"]
+[gd_scene format=4 uid="uid://dgwg4okh2obb8"]
 
 [ext_resource type="PackedScene" uid="uid://ccj6g1dgola38" path="res://src/entities/player/player.tscn" id="1_qaom2"]
+[ext_resource type="Texture2D" uid="uid://cs3xmvr2sxjg5" path="res://sprite/bloco.png" id="2_38qql"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnppf"]
-size = Vector2(550.25, 44)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38qql"]
+texture = ExtResource("2_38qql")
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ba1um"]
+sources/0 = SubResource("TileSetAtlasSource_38qql")
 
 [node name="LevelBase" type="Node2D" unique_id=1530118211]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1357190991]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=688010645]
-position = Vector2(292, 276)
-shape = SubResource("RectangleShape2D_pnppf")
 
 [node name="Player" parent="." unique_id=1076193965 instance=ExtResource("1_qaom2")]
 texture_filter = 1
 position = Vector2(113, 150)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=897651308]
+tile_map_data = PackedByteArray("AAABAA4AAAAAAAAAAAACAA4AAAABAAAAAAADAA4AAAAAAAAAAAAEAA4AAAABAAAAAAAFAA4AAAAAAAAAAAAGAA4AAAABAAAAAAAHAA4AAAAAAAAAAAAIAA4AAAABAAAAAAAJAA4AAAAAAAAAAAAKAA4AAAABAAAAAAALAA4AAAAAAAAAAAAMAA4AAAABAAAAAAANAA4AAAAAAAAAAAAOAA4AAAABAAAAAAAPAA4AAAAAAAAAAAAQAA4AAAABAAAAAAARAA4AAAAAAAAAAAASAA4AAAABAAAAAAATAA4AAAAAAAAAAAAUAA4AAAABAAAAAAAVAA4AAAAAAAAAAAAWAA4AAAABAAAAAAAXAA4AAAAAAAAAAAAYAA4AAAABAAAAAAAZAA4AAAAAAAAAAAAaAA4AAAABAAAAAAAbAA4AAAAAAAAAAAAcAA4AAAABAAAAAAAdAA4AAAAAAAAAAAAeAA4AAAABAAAAAAAfAA4AAAAAAAAAAAAgAA4AAAABAAAAAAAhAA4AAAAAAAAAAAAiAA4AAAABAAAAAAAjAA4AAAAAAAAAAAAkAA4AAAABAAAAAAAlAA4AAAAAAAAAAAAmAA4AAAABAAAAAAAnAA4AAAAAAAAAAAAoAA4AAAABAAAAAAApAA4AAAAAAAAAAAAqAA4AAAABAAAAAAArAA4AAAAAAAAAAAAsAA4AAAABAAAAAAA=")
+tile_set = SubResource("TileSet_ba1um")

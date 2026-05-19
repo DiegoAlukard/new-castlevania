@@ -12,12 +12,13 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
+	# Input configurados em projeto > Configurações do Projeto > Mapa de entrada
+	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -35,5 +36,14 @@ func _physics_process(delta: float) -> void:
 			anim.play("idle")
 	#não está no chão
 	else: anim.play("jump")
+		
+	if is_on_floor() == false:
+		if direction < 0:
+			anim.flip_h = false
+			anim.play("jump")
+		elif direction > 0: 
+			anim.flip_h = true 
+			anim.play("jump")
+	
 	
 	move_and_slide()
