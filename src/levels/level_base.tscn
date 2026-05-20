@@ -6,9 +6,11 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_38qql"]
 texture = ExtResource("2_38qql")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_ba1um"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_38qql")
 
 [node name="LevelBase" type="Node2D" unique_id=1530118211]
