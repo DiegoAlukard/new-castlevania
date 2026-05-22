@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs3xmvr2sxjg5"
-path="res://.godot/imported/bloco.png-0bcc004313b3d0b2172aa071b5714ae8.ctex"
+uid="uid://briax01iukfry"
+path="res://.godot/imported/spr_title_screen.png-6859e0d04cb76c5c62c811b26a10b9e1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/bloco.png"
-dest_files=["res://.godot/imported/bloco.png-0bcc004313b3d0b2172aa071b5714ae8.ctex"]
+source_file="res://sprite/spr_title_screen.png"
+dest_files=["res://.godot/imported/spr_title_screen.png-6859e0d04cb76c5c62c811b26a10b9e1.ctex"]
 
 [params]
 

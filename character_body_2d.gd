@@ -39,10 +39,8 @@ func _physics_process(delta: float) -> void:
 		
 	if is_on_floor() == false:
 		if direction < 0:
-			anim.flip_h = false
 			anim.play("jump")
 		elif direction > 0: 
-			anim.flip_h = true 
 			anim.play("jump")
 	
 	

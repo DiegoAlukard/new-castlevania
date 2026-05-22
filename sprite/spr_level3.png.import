@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wbm0soebgw52"
-path="res://.godot/imported/spr_stage1_entrace.png-39c1ff94c4ad9b078a6ca4d510d1e58f.ctex"
+uid="uid://b5u72bvd0lhjc"
+path="res://.godot/imported/spr_level3.png-9935ad61536218f46ab98aee4b92cc6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/spr_stage1_entrace.png"
-dest_files=["res://.godot/imported/spr_stage1_entrace.png-39c1ff94c4ad9b078a6ca4d510d1e58f.ctex"]
+source_file="res://sprite/spr_level3.png"
+dest_files=["res://.godot/imported/spr_level3.png-9935ad61536218f46ab98aee4b92cc6b.ctex"]
 
 [params]
 

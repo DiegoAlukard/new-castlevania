@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb6ypgsu15pu7"
-path="res://.godot/imported/spr_bosses.png-d77812e56a8973470c63046a99ecabb2.ctex"
+uid="uid://dj3i8i4d552jg"
+path="res://.godot/imported/spr_items_objects.png-78947dbf61c5d2efb3a58733ae9ea135.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprite/spr_bosses.png"
-dest_files=["res://.godot/imported/spr_bosses.png-d77812e56a8973470c63046a99ecabb2.ctex"]
+source_file="res://sprite/spr_items_objects.png"
+dest_files=["res://.godot/imported/spr_items_objects.png-78947dbf61c5d2efb3a58733ae9ea135.ctex"]
 
 [params]
 

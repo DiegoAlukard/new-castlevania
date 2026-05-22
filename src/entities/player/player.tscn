@@ -24,7 +24,7 @@ region = Rect2(48, 21, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ketdh"]
 atlas = ExtResource("2_vt6n5")
-region = Rect2(64, 21, 16, 32)
+region = Rect2(64, 19, 18, 34)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4m8ck"]
 animations = [{
@@ -45,7 +45,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 0.1,
 "texture": SubResource("AtlasTexture_vt6n5")
 }, {
 "duration": 1.0,
@@ -53,10 +53,16 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ketdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrxq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt6n5")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 6.0
+"speed": 4.0
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1076193965]
@@ -70,9 +76,9 @@ texture_filter = 1
 position = Vector2(-0.3749962, 2.250001)
 scale = Vector2(5.808824, 4.046875)
 sprite_frames = SubResource("SpriteFrames_4m8ck")
-animation = &"jump"
+animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.1476911
+frame_progress = 0.6336069
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=550882417]
 zoom = Vector2(0.7, 0.7)
