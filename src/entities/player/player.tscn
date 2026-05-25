@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://353wk45lcipo" path="res://sprite/spr_simon.png" id="2_vt6n5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vt6n5"]
-size = Vector2(113, 128.5)
+size = Vector2(8.02273, 10.534092)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_muk8e"]
 atlas = ExtResource("2_vt6n5")
@@ -65,22 +65,29 @@ animations = [{
 "speed": 4.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1076193965]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1076193965 groups=["Player"]]
+scale = Vector2(2.2, 2.2)
 script = ExtResource("1_4m8ck")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1656101599]
+position = Vector2(-0.37500098, 2.005681)
 shape = SubResource("RectangleShape2D_vt6n5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1044831164]
 texture_filter = 1
 position = Vector2(-0.3749962, 2.250001)
-scale = Vector2(5.808824, 4.046875)
+scale = Vector2(0.5, 0.348)
 sprite_frames = SubResource("SpriteFrames_4m8ck")
 animation = &"walk"
 autoplay = "idle"
 frame_progress = 0.6336069
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=550882417]
-zoom = Vector2(0.7, 0.7)
+visible = false
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+limit_bottom = 191
+limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
