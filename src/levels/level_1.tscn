@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b1qw1lsxf8uwp" path="res://sprite/spr_level1.png" id="1_kg615"]
 [ext_resource type="PackedScene" uid="uid://ccj6g1dgola38" path="res://src/entities/player/player.tscn" id="2_u5ev4"]
 [ext_resource type="PackedScene" uid="uid://bcvi3urxnufku" path="res://src/entities/camera.tscn" id="3_u5ev4"]
+[ext_resource type="Texture2D" uid="uid://cj83p3sndd2qs" path="res://sprite/spr_fundo_lua.png" id="4_vgtt4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vgtt4"]
 size = Vector2(721.8181, 5.909096)
@@ -10,6 +11,7 @@ size = Vector2(721.8181, 5.909096)
 [node name="Level1" type="Node2D" unique_id=1160621196]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1033578301]
+visible = false
 position = Vector2(1029, 193)
 texture = ExtResource("1_kg615")
 
@@ -25,3 +27,11 @@ position = Vector2(328.18173, 10.681831)
 shape = SubResource("RectangleShape2D_vgtt4")
 
 [node name="Camera" parent="." unique_id=741277140 instance=ExtResource("3_u5ev4")]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1725586602]
+z_index = -1
+repeat_size = Vector2(887, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=809949399]
+texture = ExtResource("4_vgtt4")

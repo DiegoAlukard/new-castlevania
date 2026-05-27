@@ -26,17 +26,15 @@ func _physics_process(delta: float) -> void:
 	
 	# se está no chão
 	if is_on_floor(): 
-		if direction < 0 or direction> 0:
+		if direction != 0:
 			anim.play("walk")
-			if direction < 0:
+			if direction < 0: 
 				anim.flip_h = false
-			else: anim.flip_h = true 
-		else:
+			else: 
+				anim.flip_h = true 
+		else: 
 			anim.play("idle")
 	#não está no chão
 	else: anim.play("jump")
-		
-	if is_on_floor() == false:
-			anim.play("jump")
 			
 	move_and_slide()
