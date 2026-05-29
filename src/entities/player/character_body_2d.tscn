@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://6mg0sc4hei5a"]
+
+[ext_resource type="Script" uid="uid://dl30gpppdf5g5" path="res://character_body_2d.gd" id="1_oiymi"]
+[ext_resource type="Texture2D" uid="uid://353wk45lcipo" path="res://sprite/spr_simon.png" id="2_1c1yx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vt6n5"]
+size = Vector2(8.02273, 10.534092)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_muk8e"]
+atlas = ExtResource("2_1c1yx")
+region = Rect2(2, 21, 19, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0mfjg"]
+atlas = ExtResource("2_1c1yx")
+region = Rect2(84, 21, 26, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vt6n5"]
+atlas = ExtResource("2_1c1yx")
+region = Rect2(32, 21, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrxq6"]
+atlas = ExtResource("2_1c1yx")
+region = Rect2(48, 21, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ketdh"]
+atlas = ExtResource("2_1c1yx")
+region = Rect2(64, 19, 18, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4m8ck"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_muk8e")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0mfjg")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_vt6n5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrxq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ketdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrxq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vt6n5")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_vt6n5")
+}],
+"loop": true,
+"name": &"walk_stair",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1076193965 groups=["Player"]]
+scale = Vector2(2.2, 2.2)
+script = ExtResource("1_oiymi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1656101599]
+position = Vector2(-0.37500098, 2.005681)
+shape = SubResource("RectangleShape2D_vt6n5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1044831164]
+texture_filter = 1
+position = Vector2(-0.3749962, 2.250001)
+scale = Vector2(0.5, 0.348)
+sprite_frames = SubResource("SpriteFrames_4m8ck")
+animation = &"walk_stair"
+autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=550882417]
+visible = false
+zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+limit_bottom = 191
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
